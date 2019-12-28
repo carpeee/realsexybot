@@ -1,6 +1,6 @@
-import asyncio
 import discord
-import random
+import os
+
 
 client = discord.Client()
 
@@ -99,4 +99,5 @@ async def on_message(message):
     elif message.content ==("!레꼬단"):
         await message.channel.send("https://discord.gg/R5XQ3tS")
 
-client.run("NjU5NjY3OTQyODkxNTg1NTY2.XgRqFQ.XnE7J5VGjo56lBriPbkGiCn5qR4")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
